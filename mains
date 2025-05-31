@@ -1,0 +1,59 @@
+//file KalkulatorPabrik.java
+package uap.mains;
+
+import uap.models.Torus;
+import uap.models.Sphere;
+import java.util.Scanner;
+
+public class KalkulatorPabrik {
+    private static final String NAMA_LENGKAP = "NAMA LENGKAP"; // Ganti dengan nama Anda
+    private static final String NIM = "NIM"; // Ganti dengan NIM Anda
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Header
+        printHeader();
+        
+        // Bagian Torus (Donat dengan lubang)
+        System.out.println("Donat dengan lubang");
+        System.out.println("=============================================");
+        
+        System.out.print("Isikan Radius : ");
+        double majorRadius = scanner.nextDouble(); // Input: 7
+        
+        System.out.print("Isikan radius : ");
+        double minorRadius = scanner.nextDouble(); // Input: 3.5
+        
+        System.out.println("=============================================");
+        
+        Torus torus = new Torus(majorRadius, minorRadius);
+        torus.printInfo();
+        
+        System.out.println("=============================================");
+        
+        // Bagian Sphere (Donat tanpa lubang)
+        System.out.println("Donat tanpa lubang");
+        System.out.println("=============================================");
+        
+        System.out.print("Isikan radius : ");
+        double sphereRadius = scanner.nextDouble(); // Input: 21
+        
+        System.out.println("=============================================");
+        
+        Sphere sphere = new Sphere(sphereRadius);
+        sphere.printInfo();
+        
+        System.out.println("=============================================");
+        
+        scanner.close();
+    }
+    
+    private static void printHeader() {
+        System.out.println("=============================================");
+        System.out.println("Kalkulator Pabrik Cetakan Donat Rumahan");
+        System.out.println(NAMA_LENGKAP);
+        System.out.println(NIM);
+        System.out.println("=============================================");
+    }
+}
