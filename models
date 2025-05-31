@@ -1,0 +1,83 @@
+// file Sphere.java
+package uap.models;
+
+import uap.bases.Shape3D;
+
+public class Sphere extends Shape3D {
+    private double radius;
+    
+    public Sphere(double radius) {
+        this.radius = radius;
+    }
+    
+    @Override
+    public double calculateVolume() {
+        // Volume sphere = 4/3 × π × r³
+        this.volume = (4.0 / 3.0) * PI * radius * radius * radius;
+        return this.volume;
+    }
+    
+    @Override
+    public double calculateSurfaceArea() {
+        // Luas permukaan sphere = 4πr²
+        this.surfaceArea = 4 * PI * radius * radius;
+        return this.surfaceArea;
+    }
+    
+    // Getter method
+    public double getRadius() {
+        return radius;
+    }
+    
+    // Setter method
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+}
+
+  // file Torus.java 
+  package uap.models;
+
+import uap.bases.Shape3D;
+
+public class Torus extends Shape3D {
+    private double majorRadius; // R (jari-jari besar)
+    private double minorRadius; // r (jari-jari kecil)
+    
+    public Torus(double majorRadius, double minorRadius) {
+        this.majorRadius = majorRadius;
+        this.minorRadius = minorRadius;
+    }
+    
+    @Override
+    public double calculateVolume() {
+        // Volume torus = 2π²Rr²
+        this.volume = 2 * PI * PI * majorRadius * minorRadius * minorRadius;
+        return this.volume;
+    }
+    
+    @Override
+    public double calculateSurfaceArea() {
+        // Luas permukaan torus = 4π²Rr
+        this.surfaceArea = 4 * PI * PI * majorRadius * minorRadius;
+        return this.surfaceArea;
+    }
+    
+    // Getter methods
+    public double getMajorRadius() {
+        return majorRadius;
+    }
+    
+    public double getMinorRadius() {
+        return minorRadius;
+    }
+    
+    // Setter methods
+    public void setMajorRadius(double majorRadius) {
+        this.majorRadius = majorRadius;
+    }
+    
+    public void setMinorRadius(double minorRadius) {
+        this.minorRadius = minorRadius;
+    }
+}
