@@ -1,1 +1,31 @@
+package uap.interfaces;
+// Calculable.java
+public interface Calculable {
+    double calculateVolume();
+    double calculateSurfaceArea();
+    double calculateMass();
+}
+
+// file Convertible.java
+package uap.interfaces;
+
+public interface Convertible {
+    double convertToKilogram();
+    int calculateShippingCost();
+}
+
+// file Convertible.java
+package uap.interfaces;
+
+public interface Convertible {
+    double convertToKilogram();
+    int calculateShippingCost();
+}
+
+// file Displayable.java
+package uap.interfaces;
+
+public interface Displayable {
+    void printInfo();
+}
 
