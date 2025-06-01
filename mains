@@ -1,13 +1,13 @@
 //file KalkulatorPabrik.java
 package uap.mains;
 
-import uap.models.Torus;
-import uap.models.Sphere;
 import java.util.Scanner;
+import uap.models.Sphere;
+import uap.models.Torus;
 
 public class KalkulatorPabrik {
-    private static final String NAMA_LENGKAP = "NAMA LENGKAP"; // Ganti dengan nama Anda
-    private static final String NIM = "NIM"; // Ganti dengan NIM Anda
+    private static final String NAMA_LENGKAP = "AGUSTINA ELIZABETH MORIN"; 
+    private static final String NIM = "245150720111001"; 
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
